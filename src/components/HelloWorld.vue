@@ -54,7 +54,7 @@ export default {
   methods: {
     submit () {
       if (this.fullName !== '' && this.phone !== '' && this.mail !== '' && this.username !== '' && this.password !== '') {
-        this.$http.post('http://203.154.59.151:5000/createuserapi', {username: this.username, password: this.password}).then((response) => {
+        this.$http.post(process.env.IPFLASK + '/createuserapi', {username: this.username, password: this.password}).then((response) => {
           alert('finish!!')
         }, (response) => {
           console.log('error')
