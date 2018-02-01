@@ -57,7 +57,8 @@ export default {
         this.$http.post(process.env.IPFLASK + '/createuserapi', {username: this.username, password: this.password}).then((response) => {
           alert('finish!!')
         }, (response) => {
-          console.log('error')
+          console.log('error!!')
+          alert('error')
         })
         // this.$router.push('/finish')
         // console.log(this.fullName !== '' && this.phone !== '' && this.mail !== '' && this.username !== '' && this.password !== '')
